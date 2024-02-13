@@ -4,6 +4,10 @@ public class Estudiante extends Persona{
 
     //Constructores
 
+    public Estudiante(int ID){
+        super(ID);
+    }
+
     public Estudiante(String nombre, String apellidos, String nif) {
         super(nombre, apellidos, nif);
     }
@@ -35,5 +39,13 @@ public class Estudiante extends Persona{
     public void setIDestudiante(int ID) {
         this.IDestudiante = ID;
     }
+
+    public String getNombre() {
+        
+        return nombre;
+        
+    }
+
+    
 
 }
