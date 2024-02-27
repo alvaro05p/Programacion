@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class PruebaExcepciones {
     
+
     public static void main(String[] args) throws Exception {
    
         //InOK.LeeInt();
@@ -16,7 +17,8 @@ public class PruebaExcepciones {
         //InOK.LeeDouRango();
 
         InOK.validaString();
-        
+    
+
     }
 
 
