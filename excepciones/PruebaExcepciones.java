@@ -3,14 +3,20 @@ import java.util.Scanner;
 
 public class PruebaExcepciones {
     
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws Exception {
+   
+        //InOK.LeeInt();
         
-        ValidaNumeros.LeeInt(); 
+        //InOK.LeeIntPos();
         
+        //InOK.LeeIntRango();
 
+        //InOK.LeeDou();
+
+        //InOK.LeeDouRango();
+
+        InOK.validaString();
         
-
     }
 
 
