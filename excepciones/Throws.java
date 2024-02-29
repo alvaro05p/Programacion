@@ -31,6 +31,10 @@ public class Throws {
 
             System.out.println("Deben ser numeros");
 
+        }catch(ArithmeticException e){
+
+            System.out.println("Excepcion Aritmetica");
+
         }catch(Exception  e) {
          
             System.out.println("Problemas con la division");

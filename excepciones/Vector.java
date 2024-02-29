@@ -3,7 +3,11 @@
 public class Vector {
     public static void main(String[] args) {
 
-        String[] = array
+        String[] array;
+
+        
+
+
 
 
     }
