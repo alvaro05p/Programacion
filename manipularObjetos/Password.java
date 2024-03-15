@@ -2,7 +2,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class password {
+public class Password {
 
     public static void main(String[] args) {
         
@@ -14,7 +14,7 @@ public class password {
 
         try{
             FileWriter password = new FileWriter("archivo.txt", true);
-            password.write("<"+usuario+">"+":"+"<"+pass+">\n");
+            password.write(usuario+":"+pass+"\n");
             System.out.println("Contenido escrito correctamente"); 
             password.close();       
         } catch (IOException e) {
