@@ -1,4 +1,7 @@
-public class Galaxia {
+package Astronomia;
+import java.io.Serializable;
+
+public class Galaxia implements Serializable{
     
     private String Object;
     private String Con;
