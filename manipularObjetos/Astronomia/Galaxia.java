@@ -7,7 +7,7 @@ public class Galaxia implements Serializable{
     private String Con;
     private String Ra;
     private String Dec;
-    private String Mag;
+    private Float Mag;
 
     public Galaxia(String Object,String Con,String Ra,String Dec,String Mag){
 
@@ -15,7 +15,7 @@ public class Galaxia implements Serializable{
         this.Con = Con;
         this.Ra = Ra;
         this.Dec = Dec;
-        this.Mag = Mag;
+        this.Mag = Float.parseFloat(Mag.replaceAll("\"",""));
 
     }
 
@@ -33,9 +33,8 @@ public class Galaxia implements Serializable{
         String cons = Con.replaceAll("\"","");
         String Rad = Ra.replaceAll("\"","");
         String Decl = Dec.replaceAll("\"","");
-        String Magn = Mag.replaceAll("\"","");
 
-        return objeto+" "+cons+" "+Rad+" "+Decl+" "+Magn;
+        return objeto+" "+cons+" "+Rad+" "+Decl+" "+Mag;
 
     }
 
@@ -47,14 +46,26 @@ public class Galaxia implements Serializable{
     
     }
 
+    public String getConst(){
+
+        String cons = Con.replaceAll("\"","");
+        return cons;
+
+    }
+
+    public Float getMag(){
+
+        return Mag;
+
+    }
+
     public String sinObjeto() {
 
         String cons = Con.replaceAll("\"","");
         String Rad = Ra.replaceAll("\"","");
         String Decl = Dec.replaceAll("\"","");
-        String Magn = Mag.replaceAll("\"","");
 
-        return cons+" "+Rad+" "+Decl+" "+Magn;
+        return cons+" "+Rad+" "+Decl+" "+Mag;
     
     }
 
