@@ -19,6 +19,8 @@ public class Galaxia implements Serializable{
 
     }
 
+   
+
     public static String readLine() {
        
         throw new UnsupportedOperationException("Unimplemented method 'readLine'");
@@ -28,13 +30,35 @@ public class Galaxia implements Serializable{
     public String toString() {
         
         String objeto = Object.replaceAll("\\s","").replaceAll("\"","");
-        String cons = Object.replaceAll("\"","");
-        String Rad = Object.replaceAll("\"","");
-        String Decl = Object.replaceAll("\"","");
-        String Magn = Object.replaceAll("\"","");
+        String cons = Con.replaceAll("\"","");
+        String Rad = Ra.replaceAll("\"","");
+        String Decl = Dec.replaceAll("\"","");
+        String Magn = Mag.replaceAll("\"","");
 
         return objeto+" "+cons+" "+Rad+" "+Decl+" "+Magn;
 
     }
+
+    public String getObject() {
+
+        String objeto = Object.replaceAll("\\s","").replaceAll("\"","");
+    
+        return objeto;
+    
+    }
+
+    public String sinObjeto() {
+
+        String cons = Con.replaceAll("\"","");
+        String Rad = Ra.replaceAll("\"","");
+        String Decl = Dec.replaceAll("\"","");
+        String Magn = Mag.replaceAll("\"","");
+
+        return cons+" "+Rad+" "+Decl+" "+Magn;
+    
+    }
+
+
+
 
 }

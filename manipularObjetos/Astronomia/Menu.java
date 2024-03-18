@@ -1,37 +1,51 @@
 package Astronomia;
-import java.io.FileInputStream;
-import java.io.ObjectInputStream;
-import java.io.IOException;
+
+import java.io.*;
+import java.util.Scanner;
 
 public class Menu {
+    public static void main(String[] args) {
+        try {
+            
+            ObjectInputStream lector = new ObjectInputStream(new FileInputStream("Astronomia/SAC.bin"));
 
-    public static void main(String[] args) {    
+            Scanner sc = new Scanner(System.in);
 
-        FileInputStream archivo = null;
-        ObjectInputStream objetos = null;
+            System.out.println("Elige una opcion: ");
+            System.out.println("1.Mostrar objeto completo.");
+            int opcion = sc.nextInt();
+            sc.nextLine();
+
+            switch (opcion) {
+                case 1:
+                    System.out.println("Identificador de objeto: ");
+                    
+                    String galaxiaNOM = sc.nextLine();
+
+                    while (true) {
+                        try {
+                            Object objeto = lector.readObject();
+                            if (objeto instanceof Galaxia) {
+                                Galaxia galaxia = (Galaxia) objeto;
         
-        try{
-            
-            archivo = new FileInputStream("SAC.bin");
-            objetos = new ObjectInputStream(archivo);
-            
-            //Leer el binario y sus objetos
+                                if(galaxia.getObject().equals(galaxiaNOM)){
         
-            while (true) {
+                                    System.out.println(galaxia.sinObjeto());
+        
+                                }
+                            }
+                        } catch (EOFException e) {
+                            // Se llegó al final del archivo
+                            break;
+                        }
+                    }
             
-                    Object objeto = objetos.readObject();
-
-                    System.out.println(objeto);
+                default:
+                    break;
             }
 
-        } catch (ClassNotFoundException e) {
-                    
-            System.out.println("Clase no encontrada: " + e.getMessage());
-                
-        } catch (IOException e) {
-
-            System.out.println("Archivo leido");
-
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
         }
     }
 }
