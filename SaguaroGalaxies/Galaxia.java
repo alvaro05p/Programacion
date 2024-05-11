@@ -21,4 +21,24 @@ public class Galaxia implements Serializable{
         return OBJECT+""+CON+""+RA+""+DEC+""+MAG;
     }
 
+    public String getOBJECT() {
+        return OBJECT;
+    }
+
+    public String getCON() {
+        return CON;
+    }
+
+    public String getRA() {
+        return RA;
+    }
+
+    public String getDEC() {
+        return DEC;
+    }
+
+    public String getMAG() {
+        return MAG;
+    }
+
 }
