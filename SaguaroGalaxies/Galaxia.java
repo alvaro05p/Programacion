@@ -18,7 +18,7 @@ public class Galaxia implements Serializable{
     }
 
     public String galaxiaToString(){
-        return OBJECT+""+CON+""+RA+""+DEC+""+MAG;
+        return OBJECT+CON+RA+DEC+MAG;
     }
 
     public String getOBJECT() {
@@ -37,8 +37,13 @@ public class Galaxia implements Serializable{
         return DEC;
     }
 
-    public String getMAG() {
-        return MAG;
+    public Double getMAG() {
+
+        String sinEspacios=MAG.trim();
+
+        Double num = Double.parseDouble(sinEspacios);
+
+        return num;
     }
 
 }
